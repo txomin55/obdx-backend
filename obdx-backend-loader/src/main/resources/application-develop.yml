@@ -1,0 +1,9 @@
+spring:
+  mongodb:
+    host: localhost
+    port: 27017
+    database: t-manager-obdx-backend
+
+obdx-backend:
+  auth:
+    mocked: true
