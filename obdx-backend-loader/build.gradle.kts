@@ -14,7 +14,7 @@ springBoot {
 }
 
 val springProfilesActive = (findProperty("springProfilesActive") as String?) ?: "develop"
-val projectArtifactId = project.name
+val projectArtifactId: String = project.name
 val projectVersion = project.version.toString()
 
 tasks.processResources {

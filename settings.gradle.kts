@@ -8,7 +8,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = "t-manager-obdx-backend"
+rootProject.name = "obdx-backend"
 
 include(
     "obdx-backend-domain",

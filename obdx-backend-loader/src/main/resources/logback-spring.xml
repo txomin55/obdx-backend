@@ -43,6 +43,7 @@
     <springProfile name="production">
         <root level="ERROR">
             <appender-ref ref="SAVE-TO-FILE"/>
+            <appender-ref ref="STDOUT"/>
         </root>
     </springProfile>
 </configuration>

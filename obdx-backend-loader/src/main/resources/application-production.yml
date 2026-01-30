@@ -1,8 +1,8 @@
 spring:
   mongodb:
     authentication-database: admin
-    password: t-manager-obdx-backend-password
-    username: t-manager-obdx-backend-user
+    password: obdx-backend-password
+    username: obdx-backend-user
     host: 18.194.82.207
     port: 27017
-    database: t-manager-obdx-backend
+    database: obdx-backend

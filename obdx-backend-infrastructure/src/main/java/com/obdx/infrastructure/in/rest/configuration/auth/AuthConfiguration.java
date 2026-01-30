@@ -19,7 +19,7 @@ public class AuthConfiguration {
     @ConditionalOnProperty(value = "obdx-backend.auth.mocked", havingValue = "true")
     DogTrainerAuthorizationExtractor mockExtractor() {
         logger.warn("YOU ARE SETTING UP THE REST API WITH MOCKED JWT VALUE");
-        return new MockedDogTrainerAuthorizationExtractor("1", "Txomin Sirera", Collections.singletonList("t-manager"));
+        return new MockedDogTrainerAuthorizationExtractor("1", "Txomin Sirera", Collections.singletonList("obdx"));
     }
 
     @Bean
