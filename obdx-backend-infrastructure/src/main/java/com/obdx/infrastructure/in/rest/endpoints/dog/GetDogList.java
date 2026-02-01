@@ -4,7 +4,7 @@ import com.obdx.application.dog.dto.DogListDTO;
 import com.obdx.application.dog.port.GetDogListServiceCase;
 import com.obdx.oas.stub.api.GetDogsApiDelegate;
 import com.obdx.oas.stub.model.GetDogListWeb;
-import com.obdx.infrastructure.in.rest.configuration.session.user.DogTrainerAuthorizationExtractor;
+import com.obdx.infrastructure.in.rest.configuration.session.user.AuthorizationExtractor;
 import com.obdx.infrastructure.in.rest.configuration.session.user.dto.RequestUserDetails;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -15,9 +15,9 @@ import java.util.List;
 public class GetDogList implements GetDogsApiDelegate {
 
     private final GetDogListServiceCase getDogListService;
-    private final DogTrainerAuthorizationExtractor tokenExtractor;
+    private final AuthorizationExtractor tokenExtractor;
 
-    public GetDogList(GetDogListServiceCase getDogListService, DogTrainerAuthorizationExtractor tokenExtractor) {
+    public GetDogList(GetDogListServiceCase getDogListService, AuthorizationExtractor tokenExtractor) {
         this.getDogListService = getDogListService;
         this.tokenExtractor = tokenExtractor;
     }

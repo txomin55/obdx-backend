@@ -1,13 +1,13 @@
 package com.obdx.infrastructure.in.rest.configuration.session.user.type.jwt;
 
-import com.obdx.infrastructure.in.rest.configuration.session.user.DogTrainerAuthorizationExtractor;
+import com.obdx.infrastructure.in.rest.configuration.session.user.AuthorizationExtractor;
 import com.obdx.infrastructure.in.rest.configuration.session.user.dto.RequestUserDetails;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import java.util.Arrays;
 
-public class JwtDogTrainerAuthorizationExtractor implements DogTrainerAuthorizationExtractor {
+public class JwtAuthorizationExtractor implements AuthorizationExtractor {
 
   @Override
   public RequestUserDetails getDataFromToken(String authorization) {

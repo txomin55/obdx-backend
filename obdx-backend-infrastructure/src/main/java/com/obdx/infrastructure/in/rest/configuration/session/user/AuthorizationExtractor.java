@@ -2,7 +2,7 @@ package com.obdx.infrastructure.in.rest.configuration.session.user;
 
 import com.obdx.infrastructure.in.rest.configuration.session.user.dto.RequestUserDetails;
 
-public interface DogTrainerAuthorizationExtractor {
+public interface AuthorizationExtractor {
 
     RequestUserDetails getDataFromToken(String authorization);
 }

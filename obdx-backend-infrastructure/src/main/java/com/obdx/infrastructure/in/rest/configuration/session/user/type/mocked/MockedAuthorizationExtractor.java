@@ -1,15 +1,15 @@
 package com.obdx.infrastructure.in.rest.configuration.session.user.type.mocked;
 
-import com.obdx.infrastructure.in.rest.configuration.session.user.DogTrainerAuthorizationExtractor;
+import com.obdx.infrastructure.in.rest.configuration.session.user.AuthorizationExtractor;
 import com.obdx.infrastructure.in.rest.configuration.session.user.dto.RequestUserDetails;
 
 import java.util.List;
 
-public class MockedDogTrainerAuthorizationExtractor implements DogTrainerAuthorizationExtractor {
+public class MockedAuthorizationExtractor implements AuthorizationExtractor {
 
     private final RequestUserDetails details;
 
-    public MockedDogTrainerAuthorizationExtractor(String id, String fullName, List<String> organizations) {
+    public MockedAuthorizationExtractor(String id, String fullName, List<String> organizations) {
         this.details = new RequestUserDetails(id, fullName, organizations);
     }
 

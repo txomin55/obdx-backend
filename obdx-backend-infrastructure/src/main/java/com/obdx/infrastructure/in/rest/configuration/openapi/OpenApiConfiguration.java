@@ -37,14 +37,4 @@ public class OpenApiConfiguration {
             )
             .build();
     }
-
-    @Bean
-    public GroupedOpenApi publicOpenApi() {
-        return GroupedOpenApi.builder()
-            .group("public")
-            .pathsToMatch("/**")
-            .pathsToExclude("/api/**")
-            .addOpenApiCustomizer(openApi -> openApi.getComponents().setSecuritySchemes(null))
-            .build();
-    }
 }

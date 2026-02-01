@@ -1,4 +1,4 @@
-# TMANAGER-OBDX-BACKEND
+# OBDX-BACKEND
 
 The backend follows a hexagonal structure, the following sections explain how the 'conflicting'
 parts or those that must be well understood of the application have been developed.

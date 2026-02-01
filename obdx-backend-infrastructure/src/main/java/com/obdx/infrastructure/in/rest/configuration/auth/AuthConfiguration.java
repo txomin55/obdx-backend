@@ -1,8 +1,8 @@
 package com.obdx.infrastructure.in.rest.configuration.auth;
 
-import com.obdx.infrastructure.in.rest.configuration.session.user.DogTrainerAuthorizationExtractor;
-import com.obdx.infrastructure.in.rest.configuration.session.user.type.jwt.JwtDogTrainerAuthorizationExtractor;
-import com.obdx.infrastructure.in.rest.configuration.session.user.type.mocked.MockedDogTrainerAuthorizationExtractor;
+import com.obdx.infrastructure.in.rest.configuration.session.user.AuthorizationExtractor;
+import com.obdx.infrastructure.in.rest.configuration.session.user.type.jwt.JwtAuthorizationExtractor;
+import com.obdx.infrastructure.in.rest.configuration.session.user.type.mocked.MockedAuthorizationExtractor;
 import java.util.Collections;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,14 +17,14 @@ public class AuthConfiguration {
 
     @Bean
     @ConditionalOnProperty(value = "obdx-backend.auth.mocked", havingValue = "true")
-    DogTrainerAuthorizationExtractor mockExtractor() {
+    AuthorizationExtractor mockExtractor() {
         logger.warn("YOU ARE SETTING UP THE REST API WITH MOCKED JWT VALUE");
-        return new MockedDogTrainerAuthorizationExtractor("1", "Txomin Sirera", Collections.singletonList("obdx"));
+        return new MockedAuthorizationExtractor("1", "Txomin Sirera", Collections.singletonList("obdx"));
     }
 
     @Bean
     @ConditionalOnProperty(value = "obdx-backend.auth.mocked", havingValue = "false")
-    DogTrainerAuthorizationExtractor jwtExtractor() {
-        return new JwtDogTrainerAuthorizationExtractor();
+    AuthorizationExtractor jwtExtractor() {
+        return new JwtAuthorizationExtractor();
     }
 }

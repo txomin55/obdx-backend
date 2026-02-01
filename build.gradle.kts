@@ -7,7 +7,7 @@ plugins {
 }
 
 allprojects {
-    group = "com.tmanager.obdx-backend"
+    group = "com.obdx-backend"
     version = "0.0.1"
 
     repositories {
